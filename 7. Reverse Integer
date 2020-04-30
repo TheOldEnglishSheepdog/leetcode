@@ -1,0 +1,15 @@
+class Solution:
+    def reverse(self, x: int) -> int:
+        if x >= 2**31-1 or x<= -2**31:
+            return 0
+        else:
+            s=str(x)
+            if x < 0:
+                reverseint = int(s[0]+s[-1:0:-1])
+            else: 
+                reverseint = int(s[-1::-1])
+            
+            if reverseint >= 2**31-1 or reverseint<= -2**31:
+                return 0
+            else:
+                return(reverseint)
